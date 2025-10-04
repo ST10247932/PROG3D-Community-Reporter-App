@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "114523301111",
+    "project_id": "spottrapp-8c870",
+    "storage_bucket": "spottrapp-8c870.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:114523301111:android:80e0a030121ea631069ff2",
+        "android_client_info": {
+          "package_name": "com.example.spottr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAwXgHFWsDyEXOxDfkETi7ss5Erh4aq5I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

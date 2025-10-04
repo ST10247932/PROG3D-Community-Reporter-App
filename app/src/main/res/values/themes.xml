@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- ✅ Main app theme -->
+    <style name="Theme.SPOTTR" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- You can customize your app colors here later -->
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:navigationBarColor">?attr/colorPrimary</item>
+    </style>
+</resources>

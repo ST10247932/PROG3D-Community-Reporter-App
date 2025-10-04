@@ -1,5 +1,6 @@
 package com.example.spottr
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -26,6 +27,15 @@ class HomeActivity : AppCompatActivity() {
                 R.id.nav_profile -> { /* TODO: Load Profile */ }
             }
             true
+        }
+        bottomNavigationView.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_profile -> {
+                    startActivity(Intent(this, ProfileActivity::class.java))
+                    true
+                }
+                else -> false
+            }
         }
     }
 }

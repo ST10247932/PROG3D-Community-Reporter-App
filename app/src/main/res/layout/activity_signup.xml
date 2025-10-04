@@ -62,7 +62,7 @@
                     android:id="@+id/etLastName"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
-                    android:hint="Surname"
+                    android:hint="Last Name"
                     android:background="@android:color/white"
                     android:padding="12dp"
                     android:textColor="@android:color/black" />
@@ -89,6 +89,26 @@
                 android:textColor="@android:color/black" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Phone Number -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address"
+
+
+            app:boxStrokeColor="@color/teal_200"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAddress"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Address"
+                android:background="@android:color/white"
+                android:padding="12dp"
+                android:textColor="@android:color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Phone Number -->
         <com.google.android.material.textfield.TextInputLayout

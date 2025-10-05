@@ -42,8 +42,6 @@
             android:name=".ProfileActivity"
             android:exported="false" />
 
-        <activity android:name=".MapsActivity"
-            android:exported="false" />
 
 
         <meta-data

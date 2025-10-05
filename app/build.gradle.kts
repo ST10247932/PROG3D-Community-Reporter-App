@@ -58,6 +58,9 @@ dependencies {
         implementation(platform("com.google.firebase:firebase-bom:33.6.0"))
         implementation("com.google.firebase:firebase-auth-ktx")
         implementation("com.google.firebase:firebase-firestore-ktx")
+        implementation("com.google.firebase:firebase-firestore:24.4.3")
+        implementation("com.google.android.gms:play-services-maps:18.1.0")
+        implementation("com.google.android.gms:play-services-location:21.0.1")
 
         // --- Other libs ---
         implementation(libs.androidx.credentials)

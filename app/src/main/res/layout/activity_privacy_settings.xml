@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#0D0D1A"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Privacy Policy"
+            android:textColor="#A0B9E1"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Scrollable Policy Text -->
+        <TextView
+            android:id="@+id/tvPolicyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:text="Welcome to Spottr! Your privacy is important to us.
+
+This Privacy Policy explains how Spottr collects, uses, and protects your personal data.
+
+We collect data to improve your experience.
+Your personal data will never be sold.
+You can opt out of tracking anytime.
+
+By accepting, you agree to our terms and privacy policy."
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Agreement Checkbox -->
+        <CheckBox
+            android:id="@+id/checkAgree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I have read and agree to the Privacy Policy"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="24dp"
+            android:textSize="16sp"/>
+
+        <!-- Accept Button -->
+        <Button
+            android:id="@+id/btnAccept"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Accept"
+            android:backgroundTint="#1A1F2E"
+            android:textColor="#A0B9E1"
+            android:padding="12dp"
+            />
+
+    </LinearLayout>
+</ScrollView>

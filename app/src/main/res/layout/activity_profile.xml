@@ -28,13 +28,21 @@
                 app:tint="@android:color/white" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="219dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:fontFamily="sans-serif-medium"
                 android:text="Profile"
                 android:textColor="@android:color/white"
-                android:textSize="22sp"
-                android:layout_marginStart="12dp"
-                android:fontFamily="sans-serif-medium"/>
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/btnSettings"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="Settings"
+                android:src="@drawable/ic_settings"
+                app:tint="@android:color/white" />
         </LinearLayout>
 
         <!-- Profile Picture -->

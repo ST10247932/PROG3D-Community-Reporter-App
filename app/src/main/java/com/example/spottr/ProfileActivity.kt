@@ -35,6 +35,8 @@ class ProfileActivity : AppCompatActivity() {
         etAddress = findViewById(R.id.etAddress)
         btnUpdate = findViewById(R.id.btnUpdate)
         btnBack = findViewById(R.id.btnBack)
+        val btnSettings: ImageView = findViewById(R.id.btnSettings)
+
 
         val user = auth.currentUser
 
@@ -95,6 +97,10 @@ class ProfileActivity : AppCompatActivity() {
         btnBack.setOnClickListener {
             startActivity(Intent(this, HomeActivity::class.java))
             finish()
+        }
+        // Settings button
+        btnSettings.setOnClickListener {
+            startActivity(Intent(this, SettingsActivity::class.java))
         }
     }
 }

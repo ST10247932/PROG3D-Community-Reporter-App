@@ -1,0 +1,160 @@
+**Repository:** [github.com/ST10247932/Spottr](https://github.com/ST10247932/PROG3D-Community-Reporter-App.git)
+
+Spottr is an Android application designed to help users **report, view, and track incidents** happening in their area in real time.  
+By combining secure authentication, a live map, and insightful data visualization, Spottr empowers communities to stay informed and safe.
+
+---
+
+## 🧭 Purpose of the App
+
+The purpose of **Spottr** is to provide a **centralized and interactive platform** where users can:
+- **Report incidents** such as crimes, safety hazards, or emergencies in real time.
+- **View incidents** on an interactive **map**, updated automatically via an API.
+- **Analyze data** through visual graphs showing incident trends and types in different locations.
+- **Receive alerts and notifications** based on user preferences and location.
+- **Manage personal information** through a dedicated profile and settings page.
+
+This helps **bridge communication** between users and local authorities by improving **incident visibility** and **community awareness**.
+
+---
+
+## 🎨 Design Considerations
+
+### 🔒 Security and Privacy
+- Registration and login via **Secure Single Sign-On (SSO)**.
+- All data stored securely in **Firebase Firestore**.
+- Reports contain **timestamps** and **geolocation** for reliability.
+
+### 🌐 User Interface (UI/UX)
+- Designed using **Material Design 3** principles.
+- Easy navigation with a bottom navigation bar.
+- Maps, charts, and reports visually integrated for clarity.
+
+### 🧱 Architecture
+- **Kotlin-based Android app**.
+- **Firebase Firestore** for cloud data storage.
+- **Google Maps API** for displaying incidents.
+- **MVVM architecture** for better scalability and maintenance.
+
+---
+
+## 📱 App Features
+
+### 🏠 Home Page
+- Displays a **detailed live map** showing all reported incidents (via API).
+- Users can filter incidents by type or date.
+
+### 🧾 Add Report
+- Users can submit detailed incident reports.
+- Includes **description, category, location, and timestamp**.
+- Automatically logs to Firestore and updates the live map.
+
+### 📊 Graphs Page
+- Visualizes **incident data trends** using charts (e.g., bar, pie).
+- Pulls data from the backend API to stay updated.
+
+### 🔔 Alerts & Notifications
+- Users can **toggle alerts on/off**.
+- Choose **sound, vibration**, and **priority level**.
+- Customizable through both the Alerts shortcut and Settings page.
+
+### 👤 Profile Page
+- Shows user information and allows profile updates.
+
+### ⚙️ Settings Page
+- Manage **alerts**, **privacy policy**, and **location settings**.
+- Toggle app permissions using system settings.
+
+### 🕒 History Page
+- Displays **previously submitted reports**.
+- Acts as a personal activity log for user reference.
+
+---
+
+## 🧩 Tech Stack
+
+| Component | Technology |
+|------------|-------------|
+| **Language** | Kotlin |
+| **Database** | Firebase Firestore |
+| **Authentication** | Firebase SSO |
+| **Map API** | Google Maps API |
+| **Charts** | MPAndroidChart |
+| **Version Control** | Git & GitHub |
+| **CI/CD** | GitHub Actions |
+
+---
+
+## 🧰 GitHub & GitHub Actions
+
+### 🔗 GitHub Usage
+Spottr is managed using **GitHub** for:
+- Version control and collaborative development.
+- Code reviews via **Pull Requests**.
+- Issue tracking for bugs and feature requests.
+
+### ⚙️ GitHub Actions
+Used for **Continuous Integration (CI)** and **automated builds**.
+
+Example workflow file (`.github/workflows/android.yml`):
+
+```yaml
+name: Android CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Build with Gradle
+        run: ./gradlew build
+---
+
+🧑‍💻 How to Clone and Open in Android Studio
+
+If someone wants to try or contribute to the Spottr app, they can follow these steps:
+
+🔹 Step 1: Copy the Repository Link
+Go to your GitHub repo page:
+👉 https://github.com/ST10247932/PROG3D-Community-Reporter-App.git
+Click on the green “Code” button, then copy the HTTPS link, for example:
+https://github.com/ST10247932/PROG3D-Community-Reporter-App.git
+
+🔹 Step 2: Open Android Studio
+Launch Android Studio
+Click “File” → “New” → “Project from Version Control”
+Select Git
+Paste the copied repo link in the URL box
+Choose your desired folder location
+Click Clone
+Android Studio will automatically:
+Download the repository
+Sync Gradle
+Build the project
+
+🔹 Step 3: Run the App
+Once Gradle finishes syncing:
+Connect your Android device (or use an emulator)
+Click Run ▶️
+The app will launch and you can start testing Spottr!
+
+---
+
+
+🖼️ App Screenshots
+
+

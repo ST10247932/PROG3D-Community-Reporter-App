@@ -55,7 +55,7 @@ class AddIncidentActivity : AppCompatActivity() {
         bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> { startActivity(Intent(this, HomeActivity::class.java)) }
-                R.id.nav_search -> { /* TODO */ }
+                R.id.nav_search -> { startActivity(Intent(this, GraphActivity::class.java)) }
                 R.id.nav_add -> { startActivity(Intent(this, AddIncidentActivity::class.java)) }
                 R.id.nav_alert -> { startActivity(Intent(this, AlertActionsActivity::class.java)) }
                 R.id.nav_profile -> { startActivity(Intent(this, ProfileActivity::class.java)) }

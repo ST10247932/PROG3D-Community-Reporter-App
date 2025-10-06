@@ -1,17 +1,21 @@
 package com.example.spottr
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ListenerRegistration
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class IncidentHistoryActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
-    private lateinit var reportAdapter: ReportAdapter
-    private val reportList = mutableListOf<Report>()
+    private lateinit var incidentHistoryAdapter: IncidentHistoryAdapter
+    private val incidentList = mutableListOf<Incident>()
 
     private val db = FirebaseFirestore.getInstance()
     private var firestoreListener: ListenerRegistration? = null
@@ -24,25 +28,39 @@ class IncidentHistoryActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         // Start with in-memory reports
-        reportList.addAll(HomeActivity.tempReports)
-        reportAdapter = ReportAdapter(reportList)
-        recyclerView.adapter = reportAdapter
+        incidentList.addAll(HomeActivity.tempIncidents)
+        incidentHistoryAdapter = IncidentHistoryAdapter(incidentList)
+        recyclerView.adapter = incidentHistoryAdapter
 
-        // Listen to Firestore in real-time
-        firestoreListener = db.collection("reports")
-            .addSnapshotListener { snapshots, e ->
-                if (e != null) return@addSnapshotListener
+        fetchIncidents()
+    }
 
-                if (snapshots != null) {
-                    for (doc in snapshots.documentChanges) {
-                        val report = doc.document.toObject(Report::class.java)
-                        if (!reportList.contains(report)) {
-                            reportList.add(report)
-                        }
-                    }
-                    reportAdapter.notifyDataSetChanged()
+    private fun fetchIncidents() {
+        RetrofitClient.instance.getIncidents().enqueue(object : Callback<List<Incident>> {
+            override fun onResponse(call: Call<List<Incident>>, response: Response<List<Incident>>) {
+                if (response.isSuccessful) {
+                    val reports = response.body() ?: emptyList()
+                    incidentList.clear()
+                    incidentList.addAll(reports)
+                    incidentHistoryAdapter.notifyDataSetChanged()
+                } else {
+                    Toast.makeText(
+                        this@IncidentHistoryActivity,
+                        "Failed to load incidents: ${response.code()}",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
+
+            override fun onFailure(call: Call<List<Incident>>, t: Throwable) {
+                Toast.makeText(
+                    this@IncidentHistoryActivity,
+                    "Error loading incidents: ${t.message}",
+                    Toast.LENGTH_SHORT
+                ).show()
+                t.printStackTrace()
+            }
+        })
     }
 
     override fun onDestroy() {

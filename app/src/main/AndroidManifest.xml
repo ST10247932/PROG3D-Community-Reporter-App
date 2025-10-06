@@ -3,6 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.spottr">
 
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- For Android 12 and below -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"/>
+
+    <!-- For Android 13+ -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,7 +21,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SPOTTR"
         tools:targetApi="31">
-
+        <activity
+            android:name=".AddIncidentActivity"
+            android:exported="false" />
         <!-- ✅ Startup screen -->
         <activity
             android:name=".StartActivity"
@@ -19,42 +31,31 @@
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- ✅ Login screen -->
+        </activity> <!-- ✅ Login screen -->
         <activity
             android:name=".LoginActivity"
-            android:exported="false" />
-
-        <!-- ✅ Register screen -->
+            android:exported="false" /> <!-- ✅ Register screen -->
         <activity
             android:name=".RegisterActivity"
-            android:exported="false" />
-
-        <!-- ✅ Home screen -->
+            android:exported="false" /> <!-- ✅ Home screen -->
         <activity
             android:name=".HomeActivity"
             android:exported="false" />
-
         <activity
             android:name=".ProfileActivity"
             android:exported="false" />
-
         <activity android:name=".SettingsActivity" />
         <activity android:name=".AlertActionsActivity" />
         <activity android:name=".PrivacyPolicyActivity" />
         <activity android:name=".LocationSettingsActivity" />
         <activity android:name=".IncidentHistoryActivity" />
 
-
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDw9RnBXM-UFhFiGXQOww1xVnVrprju7bc"/>
-
-
+            android:value="AIzaSyDw9RnBXM-UFhFiGXQOww1xVnVrprju7bc" />
     </application>
 
 </manifest>

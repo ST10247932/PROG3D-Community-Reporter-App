@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ReportAdapter(private val reportList: List<Report>) :
-    RecyclerView.Adapter<ReportAdapter.ReportViewHolder>() {
+class IncidentHistoryAdapter(private val incidentList: List<Incident>) :
+    RecyclerView.Adapter<IncidentHistoryAdapter.ReportViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReportViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -16,13 +16,13 @@ class ReportAdapter(private val reportList: List<Report>) :
     }
 
     override fun onBindViewHolder(holder: ReportViewHolder, position: Int) {
-        val report = reportList[position]
-        holder.tvAddress.text = report.address
+        val report = incidentList[position]
+        holder.tvAddress.text = report.location
         holder.tvDescription.text = report.description
         holder.tvCoordinates.text = "Lat: ${report.lat}, Lng: ${report.lng}"
     }
 
-    override fun getItemCount(): Int = reportList.size
+    override fun getItemCount(): Int = incidentList.size
 
     class ReportViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvAddress: TextView = view.findViewById(R.id.tvAddress)

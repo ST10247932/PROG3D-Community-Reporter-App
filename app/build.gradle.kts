@@ -38,12 +38,12 @@ android {
     }
     buildFeatures {
         compose = true
+        viewBinding = true
     }
 }
 
-dependencies {
 
-    dependencies {
+dependencies {
         implementation(libs.androidx.core.ktx)
         implementation(libs.androidx.lifecycle.runtime.ktx)
         implementation(libs.androidx.activity.compose)
@@ -68,8 +68,10 @@ dependencies {
         implementation(libs.androidx.credentials)
         implementation(libs.androidx.credentials.play.services.auth)
         implementation(libs.googleid)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
 
-        // --- Tests ---
+    // --- Tests ---
         testImplementation(libs.junit)
         androidTestImplementation(libs.androidx.junit)
         androidTestImplementation(libs.androidx.espresso.core)
@@ -77,8 +79,10 @@ dependencies {
         androidTestImplementation(libs.androidx.compose.ui.test.junit4)
         debugImplementation(libs.androidx.compose.ui.tooling)
         debugImplementation(libs.androidx.compose.ui.test.manifest)
-    }
 
 
-
+        implementation("com.squareup.retrofit2:retrofit:2.9.0")
+        implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+        implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.11")
 }
+

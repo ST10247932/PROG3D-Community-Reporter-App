@@ -89,3 +89,14 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 }
+/*
+References:
+
+Android Developers, 2025. Android Developer Documentation. [online]
+Available at: https://developer.android.com
+[Accessed 6 October 2025].
+
+Firebase, 2025. Firebase Documentation – Build apps fast, without managing infrastructure. [online]
+Available at: https://firebase.google.com/docs
+[Accessed 6 October 2025].
+*/

@@ -207,47 +207,7 @@
         </LinearLayout>
 
         <!-- Picture Section - Clickable to upload -->
-        <LinearLayout
-            android:id="@+id/layoutPicture"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/selector_card_background"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:paddingTop="16dp"
-            android:paddingBottom="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="24dp"
-            android:gravity="center_vertical"
-            android:clickable="true"
-            android:focusable="true">
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Picture"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/pictureStatus"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Browse local files"
-                    android:textColor="#8E92BC"
-                    android:textSize="13sp"
-                    android:layout_marginTop="4dp" />
-            </LinearLayout>
-        </LinearLayout>
 
         <!-- Report Incident Button -->
         <Button
@@ -272,7 +232,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="-5dp"
             android:background="#12122A"
             app:itemIconTint="@color/nav_item_selector"
             app:itemTextColor="@color/nav_item_selector"

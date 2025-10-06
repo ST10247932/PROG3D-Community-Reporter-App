@@ -161,3 +161,29 @@ The app will launch and you can start testing Spottr!
 🖼️ App Screenshots
 ![Home Screen](https://private-user-images.githubusercontent.com/128587675/497992838-bfc2f810-3374-49ce-bb0a-03a9c997817c.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTk3ODI3NTcsIm5iZiI6MTc1OTc4MjQ1NywicGF0aCI6Ii8xMjg1ODc2NzUvNDk3OTkyODM4LWJmYzJmODEwLTMzNzQtNDljZS1iYjBhLTAzYTljOTk3ODE3Yy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMDA2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTAwNlQyMDI3MzdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02ZTFhY2ZiZjQ0OTM2M2ZlZDRjMTkxYjFmOTVhNjAxYzJjODA2ZDYzYzY2MGNjYzFiZTYxYzkxNzAzMDMyMzkyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.w3O8fXUDGIFlKEWkW-1nvXP0Q4Nx6X2U5wUTB-GGpYk)
 
+
+🧑‍🤝‍🧑 Contributors
+ST10266914 Keyur Ramdeen Singh
+ST10247932 Preshen Pillay
+ST10279132 Ethan Pillay
+
+
+📚 References
+
+Google. (2024) Google Maps Platform Documentation. Available at: https://developers.google.com/maps
+ (Accessed: 6 October 2025).
+GitHub. (2024) GitHub Actions Documentation. Available at: https://docs.github.com/actions
+ (Accessed: 6 October 2025).
+Firebase. (2024) Firebase Documentation. Available at: https://firebase.google.com/docs
+ (Accessed: 6 October 2025).
+
+
+🧠 Future Improvements
+Implement AI-based incident prediction.
+Add SOS panic button and emergency contacts.
+Offline map support and data caching.
+Expand to web version for wider access.
+
+✨ Author
+Developed by Keyur Ramdeen Singh, Preshen Pillay and Ethan Pillay
+📅 Last Updated: October 2025

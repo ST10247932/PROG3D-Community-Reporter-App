@@ -13,14 +13,9 @@
         android:padding="16dp"
         android:gravity="center_vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
 
-        <ImageView
-            android:id="@+id/backButton"
-            android:src="@drawable/ic_back"
-            app:tint="#A0A7C0"
-            android:layout_width="24dp"
-            android:layout_height="24dp" />
 
         <TextView
             android:text="Settings"

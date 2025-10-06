@@ -6,6 +6,7 @@ import android.widget.ImageView
 import android.widget.ListView
 import android.widget.SimpleAdapter
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class SettingsActivity : AppCompatActivity() {
 
@@ -13,8 +14,21 @@ class SettingsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomNavigationView.selectedItemId = R.id.nav_home
+        bottomNavigationView.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_home -> { startActivity(Intent(this, HomeActivity::class.java)) }
+                R.id.nav_search -> { /* TODO */ }
+                R.id.nav_add -> { startActivity(Intent(this, AddIncidentActivity::class.java)) }
+                R.id.nav_alert -> { startActivity(Intent(this, AlertActionsActivity::class.java)) }
+                R.id.nav_profile -> { startActivity(Intent(this, ProfileActivity::class.java)) }
+            }
+            true
+        }
+
         val listView = findViewById<ListView>(R.id.settingsList)
-        val backButton = findViewById<ImageView>(R.id.backButton)
+
 
         val settingsItems = listOf(
             "Customize Alert Actions",
@@ -54,7 +68,5 @@ class SettingsActivity : AppCompatActivity() {
                     startActivity(Intent(this, IncidentHistoryActivity::class.java))
             }
         }
-
-        backButton.setOnClickListener { finish() }
     }
 }

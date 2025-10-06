@@ -11,51 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- Input panel -->
-        <LinearLayout
-            android:id="@+id/report_panel"
-            android:orientation="vertical"
-            android:padding="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:elevation="4dp">
 
-            <EditText
-                android:id="@+id/etAddress"
-                android:hint="Enter address"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="12dp"
-                android:textColor="@android:color/black"
-                android:textColorHint="#888888"
-                android:layout_marginBottom="20dp"
-                android:layout_marginTop="20dp"
-                android:inputType="textPostalAddress"/>
-
-            <EditText
-                android:id="@+id/etDescription"
-                android:hint="Enter report details"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="12dp"
-                android:textColor="@android:color/black"
-                android:textColorHint="#888888"
-
-                android:layout_marginBottom="16dp"
-                android:inputType="textMultiLine"
-                android:minLines="3"/>
-
-            <Button
-                android:id="@+id/btnReport"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#FF5722"
-                android:text="Report"
-                android:textColor="@android:color/white"
-                android:padding="12dp"
-                android:textSize="16sp"
-                android:layout_marginBottom="8dp"/>
-        </LinearLayout>
 
         <!-- Map fragment below input panel -->
         <androidx.fragment.app.FragmentContainerView

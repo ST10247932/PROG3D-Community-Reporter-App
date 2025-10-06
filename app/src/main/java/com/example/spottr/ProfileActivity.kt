@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
@@ -18,11 +19,23 @@ class ProfileActivity : AppCompatActivity() {
     private lateinit var etPhone: EditText
     private lateinit var etAddress: EditText
     private lateinit var btnUpdate: Button
-    private lateinit var btnBack: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
+
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomNavigationView.selectedItemId = R.id.nav_home
+        bottomNavigationView.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_home -> { startActivity(Intent(this, HomeActivity::class.java)) }
+                R.id.nav_search -> { /* TODO */ }
+                R.id.nav_add -> { startActivity(Intent(this, AddIncidentActivity::class.java)) }
+                R.id.nav_alert -> { startActivity(Intent(this, AlertActionsActivity::class.java)) }
+                R.id.nav_profile -> { startActivity(Intent(this, ProfileActivity::class.java)) }
+            }
+            true
+        }
 
         // Firebase
         auth = FirebaseAuth.getInstance()
@@ -34,7 +47,6 @@ class ProfileActivity : AppCompatActivity() {
         etPhone = findViewById(R.id.etPhone)
         etAddress = findViewById(R.id.etAddress)
         btnUpdate = findViewById(R.id.btnUpdate)
-        btnBack = findViewById(R.id.btnBack)
         val btnSettings: ImageView = findViewById(R.id.btnSettings)
 
 
@@ -93,11 +105,6 @@ class ProfileActivity : AppCompatActivity() {
             }
         }
 
-        // Back button
-        btnBack.setOnClickListener {
-            startActivity(Intent(this, HomeActivity::class.java))
-            finish()
-        }
         // Settings button
         btnSettings.setOnClickListener {
             startActivity(Intent(this, SettingsActivity::class.java))

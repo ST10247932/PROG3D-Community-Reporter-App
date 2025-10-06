@@ -30,19 +30,6 @@ class AddIncidentActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAddIncidentBinding
 
-    private var selectedImageBase64: String? = null
-
-    private val pickImageLauncher = registerForActivityResult(
-        ActivityResultContracts.GetContent()
-    ) { uri: Uri? ->
-        if (uri != null) {
-            val bitmap = getBitmapFromUri(uri)
-            selectedImageBase64 = bitmapToBase64(bitmap)
-            binding.pictureStatus.text = "Image selected ✅"
-        } else {
-            Toast.makeText(this, "Failed to get image", Toast.LENGTH_SHORT).show()
-        }
-    }
 
     fun formatDateForApi(inputDate: String): String {
         return try {
@@ -76,9 +63,6 @@ class AddIncidentActivity : AppCompatActivity() {
             true
         }
 
-        binding.layoutPicture.setOnClickListener {
-            checkAndOpenImagePicker()
-        }
 
         binding.btnBack.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
@@ -111,7 +95,7 @@ class AddIncidentActivity : AppCompatActivity() {
             val lng = results[0].longitude
 
             val incident =
-                Incident(location, dateTime, description, selectedImageBase64 ?: "", lat, lng)
+                Incident(location, dateTime, description,  lat, lng)
 
             RetrofitClient.instance.reportIncident(incident).enqueue(object : retrofit2.Callback<ApiResponse> {
                 override fun onResponse(
@@ -147,42 +131,5 @@ class AddIncidentActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-    }
-
-    private fun checkAndOpenImagePicker() {
-        val permission = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
-            Manifest.permission.READ_MEDIA_IMAGES
-        else
-            Manifest.permission.READ_EXTERNAL_STORAGE
-
-        if (ContextCompat.checkSelfPermission(this, permission) == PermissionChecker.PERMISSION_GRANTED) {
-            pickImageLauncher.launch("image/*")
-        } else {
-            requestPermissionLauncher.launch(permission)
-        }
-    }
-    private val requestPermissionLauncher =
-        registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
-            if (granted) {
-                pickImageLauncher.launch("image/*")
-            } else {
-                Toast.makeText(this, "Permission denied to access images", Toast.LENGTH_SHORT).show()
-            }
-        }
-
-    private fun bitmapToBase64(bitmap: Bitmap): String {
-        val outputStream = ByteArrayOutputStream()
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 80, outputStream)
-        val byteArray = outputStream.toByteArray()
-        return Base64.encodeToString(byteArray, Base64.DEFAULT)
-    }
-
-    private fun getBitmapFromUri(uri: Uri): Bitmap {
-        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-            val source = ImageDecoder.createSource(contentResolver, uri)
-            ImageDecoder.decodeBitmap(source)
-        } else {
-            MediaStore.Images.Media.getBitmap(contentResolver, uri)
-        }
     }
 }

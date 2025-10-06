@@ -12,9 +12,11 @@
         android:theme="@style/Theme.SPOTTR"
         tools:targetApi="31">
         <activity
-            android:name=".AddIncidentActivity"
+            android:name=".GraphActivity"
             android:exported="false" />
-        <!-- ✅ Startup screen -->
+        <activity
+            android:name=".AddIncidentActivity"
+            android:exported="false" /> <!-- ✅ Startup screen -->
         <activity
             android:name=".StartActivity"
             android:exported="true"

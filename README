@@ -159,7 +159,11 @@ The app will launch and you can start testing Spottr!
 
 
 🖼️ App Screenshots
-![Home Screen](https://private-user-images.githubusercontent.com/128587675/497992838-bfc2f810-3374-49ce-bb0a-03a9c997817c.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTk3ODI3NTcsIm5iZiI6MTc1OTc4MjQ1NywicGF0aCI6Ii8xMjg1ODc2NzUvNDk3OTkyODM4LWJmYzJmODEwLTMzNzQtNDljZS1iYjBhLTAzYTljOTk3ODE3Yy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMDA2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTAwNlQyMDI3MzdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02ZTFhY2ZiZjQ0OTM2M2ZlZDRjMTkxYjFmOTVhNjAxYzJjODA2ZDYzYzY2MGNjYzFiZTYxYzkxNzAzMDMyMzkyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.w3O8fXUDGIFlKEWkW-1nvXP0Q4Nx6X2U5wUTB-GGpYk)
+<h3>🏠 Home Page</h3>
+<p>Displays a live map (API-powered) with all reported incidents.</p>
+<img src="https://github.com/ST10247932/PROG3D-Community-Reporter-App/blob/master/screenshots/loginspottr.pngraw=true" 
+     alt="Home Page" 
+     width="350"/>
 
 
 🧑‍🤝‍🧑 Contributors

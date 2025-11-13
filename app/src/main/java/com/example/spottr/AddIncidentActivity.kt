@@ -98,34 +98,27 @@ class AddIncidentActivity : AppCompatActivity() {
                 Incident(location, dateTime, description,  lat, lng)
 
             RetrofitClient.instance.reportIncident(incident).enqueue(object : retrofit2.Callback<ApiResponse> {
-                override fun onResponse(
-                    call: Call<ApiResponse>,
-                    response: retrofit2.Response<ApiResponse>
-                ) {
+                override fun onResponse(call: Call<ApiResponse>, response: retrofit2.Response<ApiResponse>) {
                     if (response.isSuccessful) {
-                        Toast.makeText(
+                        Toast.makeText(this@AddIncidentActivity, "Incident reported successfully!", Toast.LENGTH_SHORT).show()
+
+                        // Show local notification
+                        NotificationHelper.showNotification(
                             this@AddIncidentActivity,
-                            "Incident reported successfully!",
-                            Toast.LENGTH_SHORT
-                        ).show()
+                            "New Incident Reported",
+                            "A new issue has been reported at $location"
+                        )
                     } else {
-                        Toast.makeText(
-                            this@AddIncidentActivity,
-                            "Failed: ${response.code()}",
-                            Toast.LENGTH_SHORT
-                        ).show()
+                        Toast.makeText(this@AddIncidentActivity, "Failed: ${response.code()}", Toast.LENGTH_SHORT).show()
                     }
                 }
 
                 override fun onFailure(call: Call<ApiResponse?>, t: Throwable) {
-                    Toast.makeText(
-                        this@AddIncidentActivity,
-                        "Error: ${t.message}",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    Toast.makeText(this@AddIncidentActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
                     t.printStackTrace()
                 }
             })
+
 
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)

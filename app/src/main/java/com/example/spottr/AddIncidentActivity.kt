@@ -123,12 +123,17 @@ class AddIncidentActivity : AppCompatActivity() {
                 lng = lng
             )
 
+            NotificationHelper.showNotification(this, "Incident Reported", "Your new incident has been successfully submitted.")
+
+
             // 3. Inform the user and navigate away.
             // The repository will handle the saving and syncing in the background.
             Toast.makeText(this, "Incident submitted! It will be synced when ready.", Toast.LENGTH_LONG).show()
 
             // Navigate back to the home screen after submission.
             val intent = Intent(this, HomeActivity::class.java)
+            intent.putExtra("new_incident_lat", lat)
+            intent.putExtra("new_incident_lng", lng)
             // Flags to clear the back stack so the user doesn't return to the add form.
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(intent)

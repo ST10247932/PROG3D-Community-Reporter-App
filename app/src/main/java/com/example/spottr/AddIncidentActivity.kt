@@ -14,6 +14,7 @@ import android.util.Base64
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.content.PermissionChecker
@@ -23,6 +24,7 @@ import com.example.spottr.databinding.ActivityAddIncidentBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import retrofit2.Call
 import java.io.ByteArrayOutputStream
+import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.Locale
 
@@ -30,6 +32,7 @@ class AddIncidentActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAddIncidentBinding
 
+    private val incidentViewModel: IncidentViewModel by viewModels()
 
     fun formatDateForApi(inputDate: String): String {
         return try {
@@ -85,50 +88,52 @@ class AddIncidentActivity : AppCompatActivity() {
 
             // Get coordinates from address
             val geocoder = Geocoder(this)
-            val results = geocoder.getFromLocationName(location, 1)
-            if (results.isNullOrEmpty()) {
-                Toast.makeText(this, "Address not found", Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
+            var lat: Double
+            var lng: Double
+
+            try {
+                // Attempt to get coordinates from the address
+                val results = geocoder.getFromLocationName(location, 1)
+
+                if (results.isNullOrEmpty()) {
+                    Toast.makeText(this, "Address not found. Please check the location.", Toast.LENGTH_SHORT).show()
+                    return@setOnClickListener
+                }
+                lat = results[0].latitude
+                lng = results[0].longitude
+
+            } catch (e: IOException) {
+                // This block will now run when offline, preventing the crash.
+                Toast.makeText(this, "Offline: Could not verify address. Saving incident with default coordinates.", Toast.LENGTH_LONG).show()
+                // You MUST provide fallback coordinates, otherwise the incident is useless.
+                // 0.0, 0.0 is a common default. The real address is still saved.
+                lat = 0.0
+                lng = 0.0
             }
 
-            val lat = results[0].latitude
-            val lng = results[0].longitude
 
-            val incident =
-                Incident(location, dateTime, description,  lat, lng)
+            // 2. THIS IS THE CRITICAL CHANGE
+            // Instead of calling Retrofit directly, call the ViewModel function.
+            // The ViewModel will handle everything else.
+            incidentViewModel.addNewIncident(
+                location = location,
+                dateTime = dateTime,
+                description = description,
+                lat = lat,
+                lng = lng
+            )
 
-            RetrofitClient.instance.reportIncident(incident).enqueue(object : retrofit2.Callback<ApiResponse> {
-                override fun onResponse(
-                    call: Call<ApiResponse>,
-                    response: retrofit2.Response<ApiResponse>
-                ) {
-                    if (response.isSuccessful) {
-                        Toast.makeText(
-                            this@AddIncidentActivity,
-                            "Incident reported successfully!",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    } else {
-                        Toast.makeText(
-                            this@AddIncidentActivity,
-                            "Failed: ${response.code()}",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    }
-                }
+            // 3. Inform the user and navigate away.
+            // The repository will handle the saving and syncing in the background.
+            Toast.makeText(this, "Incident submitted! It will be synced when ready.", Toast.LENGTH_LONG).show()
 
-                override fun onFailure(call: Call<ApiResponse?>, t: Throwable) {
-                    Toast.makeText(
-                        this@AddIncidentActivity,
-                        "Error: ${t.message}",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                    t.printStackTrace()
-                }
-            })
-
+            // Navigate back to the home screen after submission.
             val intent = Intent(this, HomeActivity::class.java)
+            // Flags to clear the back stack so the user doesn't return to the add form.
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(intent)
+            finish() // Finish this activity
+
         }
 
     }

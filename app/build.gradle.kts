@@ -3,7 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.google.gms.google.services)
-
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -44,6 +44,14 @@ android {
 
 
 dependencies {
+
+    implementation(libs.androidx.work.runtime.ktx)
+    implementation(libs.androidx.room.ktx)
+    val room_version = "2.6.1"
+    implementation("androidx.room:room-runtime:$room_version")
+    ksp("androidx.room:room-compiler:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+    implementation("androidx.room:room-ktx:$room_version")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -86,6 +94,10 @@ dependencies {
     implementation("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.11")
 
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+
+    implementation(libs.androidx.activity.ktx)
+    implementation("com.google.android.gms:play-services-location:21.2.0")
+
 
 }
 

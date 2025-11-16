@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Privacy Policy"
+            android:text="@string/privacy_policy"
             android:textColor="#A0B9E1"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -29,15 +29,7 @@
             android:textColor="#FFFFFF"
             android:textSize="16sp"
             android:lineSpacingExtra="4dp"
-            android:text="Welcome to Spottr! Your privacy is important to us.
-
-This Privacy Policy explains how Spottr collects, uses, and protects your personal data.
-
-We collect data to improve your experience.
-Your personal data will never be sold.
-You can opt out of tracking anytime.
-
-By accepting, you agree to our terms and privacy policy."
+            android:text="@string/welcome_to_spottr_your_privacy_is_important_to_us_this_privacy_policy_explains_how_spottr_collects_uses_and_protects_your_personal_data_we_collect_data_to_improve_your_experience_your_personal_data_will_never_be_sold_you_can_opt_out_of_tracking_anytime_by_accepting_you_agree_to_our_terms_and_privacy_policy"
             android:layout_marginBottom="24dp"/>
 
         <!-- Agreement Checkbox -->
@@ -45,7 +37,7 @@ By accepting, you agree to our terms and privacy policy."
             android:id="@+id/checkAgree"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="I have read and agree to the Privacy Policy"
+            android:text="@string/i_have_read_and_agree_to_the_privacy_policy"
             android:textColor="#FFFFFF"
             android:layout_marginBottom="24dp"
             android:textSize="16sp"/>
@@ -55,7 +47,7 @@ By accepting, you agree to our terms and privacy policy."
             android:id="@+id/btnAccept"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Accept"
+            android:text="@string/accept"
             android:backgroundTint="#1A1F2E"
             android:textColor="#A0B9E1"
             android:padding="12dp"

@@ -35,7 +35,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="First Name"
+                android:hint="@string/first_name"
                 app:boxStrokeColor="@color/teal_200"
                 android:layout_marginEnd="8dp">
 
@@ -54,7 +54,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="Last Name"
+                android:hint="@string/last_name"
                 app:boxStrokeColor="@color/teal_200"
                 android:layout_marginStart="8dp">
 
@@ -62,7 +62,7 @@
                     android:id="@+id/etLastName"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
-                    android:hint="Last Name"
+                    android:hint="@string/last_name"
                     android:background="@android:color/white"
                     android:padding="12dp"
                     android:textColor="@android:color/black" />
@@ -74,7 +74,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
+            android:hint="@string/email"
             app:boxStrokeColor="@color/teal_200"
             android:layout_marginBottom="16dp">
 
@@ -82,7 +82,7 @@
                 android:id="@+id/etEmail"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:hint="Email"
+                android:hint="@string/email"
                 android:background="@android:color/white"
                 android:padding="12dp"
                 android:inputType="textEmailAddress"
@@ -94,7 +94,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Address"
+            android:hint="@string/address"
 
 
             app:boxStrokeColor="@color/teal_200"
@@ -104,7 +104,7 @@
                 android:id="@+id/etAddress"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:hint="Address"
+                android:hint="@string/address"
                 android:background="@android:color/white"
                 android:padding="12dp"
                 android:textColor="@android:color/black" />
@@ -115,7 +115,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Phone Number"
+            android:hint="@string/phone_number"
 
             app:startIconContentDescription="Select country code"
             app:boxStrokeColor="@color/teal_200"
@@ -125,7 +125,7 @@
                 android:id="@+id/etPhone"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:hint="Phone Number"
+                android:hint="@string/phone_number"
                 android:background="@android:color/white"
                 android:padding="12dp"
                 android:inputType="phone"
@@ -137,7 +137,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Set Password"
+            android:hint="@string/set_password"
             app:endIconMode="password_toggle"
             app:endIconContentDescription="Show or hide password"
             app:boxStrokeColor="@color/teal_200"
@@ -159,7 +159,7 @@
             android:id="@+id/btnRegister"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:text="Register"
+            android:text="@string/register"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:backgroundTint="@color/blue_500"
@@ -177,7 +177,7 @@
                 android:id="@+id/tvLogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Already have an account? Login"
+                android:text="@string/already_have_an_account_login"
                 android:textSize="14sp"
                 android:textColor="@color/teal_200"
                 android:padding="12dp"

@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Customize Alert Actions"
+        android:text="@string/customize_alert_actions"
         android:textColor="#A0B9E1"
         android:textSize="24sp"
         android:textStyle="bold"

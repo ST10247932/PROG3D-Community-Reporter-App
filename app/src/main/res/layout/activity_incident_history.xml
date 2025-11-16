@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Incident History"
+        android:text="@string/incident_history"
         android:textColor="#A0B9E1"
         android:textSize="24sp"
         android:textStyle="bold"

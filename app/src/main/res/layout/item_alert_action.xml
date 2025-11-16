@@ -41,14 +41,14 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:textColor="#FFFFFF"
-            android:text="Category: General"/>
+            android:text="@string/category_general"/>
 
         <TextView
             android:id="@+id/tvPriority"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#FFFFFF"
-            android:text="Priority: Medium"/>
+            android:text="@string/priority_medium"/>
     </LinearLayout>
 
     <!-- Sound selection and Test button -->
@@ -63,7 +63,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Sound"
+            android:text="@string/sound"
             android:backgroundTint="#2A2F42"
             android:textColor="#A0B9E1"/>
 
@@ -71,7 +71,7 @@
             android:id="@+id/btnTestAlert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Test"
+            android:text="@string/test"
             android:layout_marginStart="8dp"
             android:backgroundTint="#2A2F42"
             android:textColor="#A0B9E1"/>

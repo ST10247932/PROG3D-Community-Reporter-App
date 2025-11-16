@@ -18,6 +18,14 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        packagingOptions {
+            resources {
+                // Use add() to exclude individual files
+                excludes.add("values-af/values.xml")
+                excludes.add("values-zu/values.xml")
+            }
+        }
     }
 
     buildTypes {

@@ -39,7 +39,7 @@
                     android:layout_weight="1"
                     android:layout_marginStart="12dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Profile"
+                    android:text="@string/profile"
                     android:textColor="@android:color/white"
                     android:textSize="35sp" />
 
@@ -48,7 +48,7 @@
                     android:layout_width="32dp"
                     android:layout_height="32dp"
                     android:src="@drawable/ic_settings"
-                    android:contentDescription="Settings"
+                    android:contentDescription="@string/settings"
                     app:tint="@android:color/white"/>
             </LinearLayout>
 
@@ -61,7 +61,7 @@
                 android:layout_marginTop="24dp"
                 android:background="@drawable/circle_border"
                 android:padding="4dp"
-                android:contentDescription="Profile picture"
+                android:contentDescription="@string/profile_picture"
                 app:tint="@android:color/white" />
 
             <!-- Username -->
@@ -69,7 +69,7 @@
                 android:id="@+id/tvName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Loading..."
+                android:text="@string/loading"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
                 android:layout_marginTop="12dp"
@@ -81,7 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
-                android:hint="Email"
+                android:hint="@string/email"
                 android:inputType="textEmailAddress"
                 android:padding="12dp"
                 android:background="@drawable/edittext_bg"
@@ -94,7 +94,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="12dp"
-                android:hint="Your mobile number"
+                android:hint="@string/your_mobile_number"
                 android:inputType="phone"
                 android:padding="12dp"
                 android:background="@drawable/edittext_bg"
@@ -107,7 +107,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="12dp"
-                android:hint="Address"
+                android:hint="@string/address"
                 android:inputType="textPostalAddress"
                 android:padding="12dp"
                 android:background="@drawable/edittext_bg"
@@ -119,7 +119,7 @@
                 android:id="@+id/btnUpdate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Update"
+                android:text="@string/update"
                 android:textAllCaps="false"
                 android:textSize="16sp"
                 android:backgroundTint="#3B82F6"

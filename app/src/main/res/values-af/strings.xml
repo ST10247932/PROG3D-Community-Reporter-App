@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">SPOTTR</string>
+    <string name="lt_back">&lt; Terug</string>
+    <string name="report_incident">Rapporteer Insident</string>
+    <string name="address">Adres</string>
+    <string name="enter_location_and_address">Voer ligging en adres in</string>
+    <string name="date_amp_time">Datum &amp; Tyd</string>
+    <string name="select_date_eg_yyyy_mm_dd">Kies datum. bv. jjjj-MM-dd</string>
+    <string name="description">Beskrywing</string>
+    <string name="type_here">Tik hier . . .</string>
+    <string name="customize_alert_actions">Pas waarskuwingsaksies aan</string>
+    <string name="incident_history">Insidentgeskiedenis</string>
+    <string name="location_settings">Ligginginstellings</string>
+    <string name="enable_location_tracking">Aktiveer liggingopsporing</string>
+    <string name="open_system_location_settings">Maak stelsel-ligginginstellings oop</string>
+    <string name="sign_in_to_your_account">Meld aan by jou\nRekening</string>
+    <string name="enter_your_email_and_password_to_log_in">Voer jou e-pos en wagwoord in om aan te meld</string>
+    <string name="email">E-pos</string>
+    <string name="password">Wagwoord</string>
+    <string name="log_in">Meld Aan</string>
+    <string name="or">Of</string>
+    <string name="don_t_have_an_account">Het jy nie \'n rekening nie?</string>
+    <string name="sign_up">Registreer</string>
+    <string name="privacy_policy">Privaatheidsbeleid</string>
+    <string name="welcome_to_spottr_your_privacy_is_important_to_us_this_privacy_policy_explains_how_spottr_collects_uses_and_protects_your_personal_data_we_collect_data_to_improve_your_experience_your_personal_data_will_never_be_sold_you_can_opt_out_of_tracking_anytime_by_accepting_you_agree_to_our_terms_and_privacy_policy">
+        Welkom by Spottr! Jou privaatheid is vir ons belangrik. Hierdie privaatheidsbeleid verduidelik hoe Spottr jou persoonlike data insamel, gebruik en beskerm. Ons versamel data om jou ervaring te verbeter. Jou persoonlike data sal nooit verkoop word nie. Jy kan enige tyd uitsporing deaktiveer. Deur te aanvaar, stem jy in tot ons bepalings en privaatheidsbeleid.
+    </string>
+    <string name="i_have_read_and_agree_to_the_privacy_policy">Ek het die privaatheidsbeleid gelees en stem saam</string>
+    <string name="accept">Aanvaar</string>
+    <string name="profile">Profiel</string>
+    <string name="settings">Instellings</string>
+    <string name="profile_picture">Profielfoto</string>
+    <string name="loading">Laai...</string>
+    <string name="your_mobile_number">Jou selfoonnommer</string>
+    <string name="update">Werk By</string>
+    <string name="first_name">Voornaam</string>
+    <string name="last_name">Van</string>
+    <string name="phone_number">Telefoonnommer</string>
+    <string name="set_password">Stel Wagwoord</string>
+    <string name="register">Registreer</string>
+    <string name="already_have_an_account_login">Het jy reeds \'n rekening? Meld aan</string>
+    <string name="login">Meld Aan</string>
+    <string name="category_general">Kategorie: Algemeen</string>
+    <string name="priority_medium">Prioriteit: Medium</string>
+    <string name="sound">Klank</string>
+    <string name="test">Toets</string>
+</resources>

@@ -34,14 +34,14 @@
                 android:minWidth="48dp"
                 android:minHeight="48dp"
                 android:paddingBottom="8dp"
-                android:text="&lt; Back"
+                android:text="@string/lt_back"
                 android:textColor="#8E92BC"
                 android:textSize="16sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Report Incident"
+                android:text="@string/report_incident"
                 android:textColor="#FFFFFF"
                 android:textSize="32sp"
                 android:textStyle="bold" />
@@ -79,7 +79,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Address"
+                        android:text="@string/address"
                         android:textColor="#FFFFFF"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -91,7 +91,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="#252A45"
-                android:hint="Enter location and address"
+                android:hint="@string/enter_location_and_address"
                 android:textColorHint="#5A5F7D"
                 android:textColor="#FFFFFF"
                 android:paddingStart="12dp"
@@ -131,7 +131,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Date &amp; Time"
+                        android:text="@string/date_amp_time"
                         android:textColor="#FFFFFF"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -143,7 +143,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="#252A45"
-                android:hint="Select date. eg. yyyy-MM-dd"
+                android:hint="@string/select_date_eg_yyyy_mm_dd"
                 android:textColorHint="#5A5F7D"
                 android:textColor="#FFFFFF"
                 android:paddingStart="12dp"
@@ -183,7 +183,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Description"
+                        android:text="@string/description"
                         android:textColor="#FFFFFF"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -195,7 +195,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:background="#252A45"
-                android:hint="Type Here . . ."
+                android:hint="@string/type_here"
                 android:textColorHint="#5A5F7D"
                 android:textColor="#FFFFFF"
                 android:padding="12dp"

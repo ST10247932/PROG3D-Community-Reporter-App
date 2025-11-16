@@ -16,14 +16,23 @@
         android:contentDescription="SPOTTR Logo"
         android:src="@drawable/logo_spottr" />
 
-
+    <!-- Language Button -->
+    <Button
+        android:id="@+id/btnLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🌐 Language"
+        android:textAllCaps="false"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@android:color/black" />
 
     <!-- Login Button -->
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="@string/login"
         android:textAllCaps="false"
         android:backgroundTint="@color/white"
         android:textColor="@android:color/black"
@@ -35,7 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
-        android:text="Sign Up"
+        android:text="@string/sign_up"
         android:textAllCaps="false"
         android:textColor="@android:color/black" />
 

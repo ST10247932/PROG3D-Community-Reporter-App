@@ -18,7 +18,7 @@
 
 
         <TextView
-            android:text="Settings"
+            android:text="@string/settings"
             android:textColor="#A0B9E1"
             android:textSize="24sp"
             android:textStyle="bold"

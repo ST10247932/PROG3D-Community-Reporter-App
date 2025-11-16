@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">SPOTTR</string>
+    <string name="lt_back">&lt; Emuva</string>
+    <string name="report_incident">Bika Isigameko</string>
+    <string name="address">Ikheli</string>
+    <string name="enter_location_and_address">Faka indawo nekheli</string>
+    <string name="date_amp_time">Usuku &amp; Isikhathi</string>
+    <string name="select_date_eg_yyyy_mm_dd">Khetha usuku. isb. yyyy-MM-dd</string>
+    <string name="description">Incazelo</string>
+    <string name="type_here">Bhala lapha . . .</string>
+    <string name="customize_alert_actions">Lungisa izenzo zesexwayiso</string>
+    <string name="incident_history">Umlando Wezigameko</string>
+    <string name="location_settings">Izilungiselelo Zendawo</string>
+    <string name="enable_location_tracking">Vumela ukulandelela indawo</string>
+    <string name="open_system_location_settings">Vula izilungiselelo zohlelo zendawo</string>
+    <string name="sign_in_to_your_account">Ngena ku-\nAkhawunti Yakho</string>
+    <string name="enter_your_email_and_password_to_log_in">Faka i-imeyili nephasiwedi ukuze ungene</string>
+    <string name="email">I-imeyili</string>
+    <string name="password">Iphasiwedi</string>
+    <string name="log_in">Ngena</string>
+    <string name="or">Noma</string>
+    <string name="don_t_have_an_account">Awunayo i-akhawunti?</string>
+    <string name="sign_up">Bhalisa</string>
+    <string name="privacy_policy">Inqubomgomo yobumfihlo</string>
+    <string name="welcome_to_spottr_your_privacy_is_important_to_us_this_privacy_policy_explains_how_spottr_collects_uses_and_protects_your_personal_data_we_collect_data_to_improve_your_experience_your_personal_data_will_never_be_sold_you_can_opt_out_of_tracking_anytime_by_accepting_you_agree_to_our_terms_and_privacy_policy">
+        Siyakwamukela ku-Spottr! Ubumfihlo bakho bubalulekile kithina. Le nqubomgomo yobumfihlo ichaza indlela i-Spottr eqoqa, esetshenziswa futhi evikela ngayo imininingwane yakho. Siqoqa imininingwane ukuze sithuthukise ulwazi lwakho. Imininingwane yakho ayisoze ithengiswe. Ungayeka ukulandelelwa noma yinini. Ngokwamukela, uyavuma imigomo yethu nenqubomgomo yobumfihlo.
+    </string>
+    <string name="i_have_read_and_agree_to_the_privacy_policy">Ngifundile futhi ngiyavuma inqubomgomo yobumfihlo</string>
+    <string name="accept">Yamukela</string>
+    <string name="profile">Iphrofayela</string>
+    <string name="settings">Izilungiselelo</string>
+    <string name="profile_picture">Isithombe sephrofayela</string>
+    <string name="loading">Kulayishwa...</string>
+    <string name="your_mobile_number">Inombolo yakho yeselula</string>
+    <string name="update">Buyekeza</string>
+    <string name="first_name">Igama</string>
+    <string name="last_name">Isibongo</string>
+    <string name="phone_number">Inombolo yocingo</string>
+    <string name="set_password">Setha Iphasiwedi</string>
+    <string name="register">Bhalisa</string>
+    <string name="already_have_an_account_login">Usunayo i-akhawunti? Ngena</string>
+    <string name="login">Ngena</string>
+    <string name="category_general">Isigaba: Esijwayelekile</string>
+    <string name="priority_medium">Iphuzu: Emaphakathi</string>
+    <string name="sound">Umsindo</string>
+    <string name="test">Hlola</string>
+</resources>

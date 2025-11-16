@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Location Settings"
+        android:text="@string/location_settings"
         android:textColor="#A0B9E1"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -21,12 +21,12 @@
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginBottom="16dp"
-        android:text="Enable Location Tracking"
+        android:text="@string/enable_location_tracking"
         android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/btnSystemSettings"
-        android:text="Open System Location Settings"
+        android:text="@string/open_system_location_settings"
         android:backgroundTint="#1A1F2E"
         android:textColor="#A0B9E1"
         android:layout_width="match_parent"

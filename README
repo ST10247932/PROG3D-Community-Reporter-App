@@ -1,6 +1,5 @@
 # 🛰️ Spottr – Community Incident Reporting App
 
-
 **Repository:** [github.com/ST10247932/Spottr](https://github.com/ST10247932/PROG3D-Community-Reporter-App.git)
 
 Spottr is an Android application designed to help users **report, view, and track incidents** happening in their area in real time.  
@@ -60,6 +59,7 @@ This helps **bridge communication** between users and local authorities by impro
 - Users can **toggle alerts on/off**.
 - Choose **sound, vibration**, and **priority level**.
 - Customizable through both the Alerts shortcut and Settings page.
+- **Real-time push notifications** for live updates and alerts **(POE)**.
 
 ### 👤 Profile Page
 - Shows user information and allows profile updates.
@@ -72,6 +72,19 @@ This helps **bridge communication** between users and local authorities by impro
 - Displays **previously submitted reports**.
 - Acts as a personal activity log for user reference.
 
+### 📴 Offline Mode with Sync
+- Allows users to **perform actions offline** with synchronization capabilities once they reconnect **(POE)**.
+- Uses **RoomDB or SQLite** for local data storage.
+- Automatically syncs offline reports and data when internet connection is restored.
+
+### 🔐 Biometric Authentication
+- Implements **fingerprint or facial recognition** for secure user authentication **(POE)**.
+- Provides enhanced security for app access and sensitive features.
+
+### 🌍 Multi-language Support
+- Includes support for **at least two South African Languages** **(POE)**.
+- Enhances accessibility for diverse communities.
+
 ---
 
 ## 🧩 Tech Stack
@@ -80,9 +93,11 @@ This helps **bridge communication** between users and local authorities by impro
 |------------|-------------|
 | **Language** | Kotlin |
 | **Database** | Firebase Firestore |
-| **Authentication** | Firebase SSO |
+| **Local Database** | RoomDB / SQLite |
+| **Authentication** | Firebase SSO, Biometric |
 | **Map API** | Google Maps API |
 | **Charts** | MPAndroidChart |
+| **Notifications** | Firebase Cloud Messaging (FCM) |
 | **Version Control** | Git & GitHub |
 | **CI/CD** | GitHub Actions |
 
@@ -125,67 +140,75 @@ jobs:
 
       - name: Build with Gradle
         run: ./gradlew build
+```
+
 ---
 
-🧑‍💻 How to Clone and Open in Android Studio
+## 🧑‍💻 How to Clone and Open in Android Studio
 
 If someone wants to try or contribute to the Spottr app, they can follow these steps:
 
-🔹 Step 1: Copy the Repository Link
+### 🔹 Step 1: Copy the Repository Link
 Go to your GitHub repo page:
 👉 https://github.com/ST10247932/PROG3D-Community-Reporter-App.git
-Click on the green “Code” button, then copy the HTTPS link, for example:
+Click on the green "Code" button, then copy the HTTPS link, for example:
 https://github.com/ST10247932/PROG3D-Community-Reporter-App.git
 
-🔹 Step 2: Open Android Studio
-Launch Android Studio
-Click “File” → “New” → “Project from Version Control”
-Select Git
-Paste the copied repo link in the URL box
-Choose your desired folder location
-Click Clone
-Android Studio will automatically:
-Download the repository
-Sync Gradle
-Build the project
+### 🔹 Step 2: Open Android Studio
+- Launch Android Studio
+- Click "File" → "New" → "Project from Version Control"
+- Select Git
+- Paste the copied repo link in the URL box
+- Choose your desired folder location
+- Click Clone
 
-🔹 Step 3: Run the App
+Android Studio will automatically:
+- Download the repository
+- Sync Gradle
+- Build the project
+
+### 🔹 Step 3: Run the App
 Once Gradle finishes syncing:
-Connect your Android device (or use an emulator)
-Click Run ▶️
-The app will launch and you can start testing Spottr!
+- Connect your Android device (or use an emulator)
+- Click Run ▶️
+- The app will launch and you can start testing Spottr!
 
 ---
 
-
-🖼️ App Screenshots
+## 🖼️ App Screenshots
 Please View the Apps Screenshots in the screenshots folder
 https://github.com/ST10247932/PROG3D-Community-Reporter-App/tree/08c6ca28ff238b7d969f3e24b6487b5db1970350/screenshots 
 
+---
 
-🧑‍🤝‍🧑 Contributors
-ST10266914 Keyur Ramdeen Singh
-ST10247932 Preshen Pillay
-ST10279132 Ethan Pillay
+## 🧑‍🤝‍🧑 Contributors
+- ST10266914 Keyur Ramdeen Singh
+- ST10247932 Preshen Pillay
+- ST10279132 Ethan Pillay
 
+---
 
-📚 References
+## 📚 References
 
-Google. (2024) Google Maps Platform Documentation. Available at: https://developers.google.com/maps
- (Accessed: 6 October 2025).
-GitHub. (2024) GitHub Actions Documentation. Available at: https://docs.github.com/actions
- (Accessed: 6 October 2025).
-Firebase. (2024) Firebase Documentation. Available at: https://firebase.google.com/docs
- (Accessed: 6 October 2025).
+Google. (2024) Google Maps Platform Documentation. Available at: https://developers.google.com/maps (Accessed: 6 October 2025).
 
+GitHub. (2024) GitHub Actions Documentation. Available at: https://docs.github.com/actions (Accessed: 6 October 2025).
 
-🧠 Future Improvements
-Implement AI-based incident prediction.
-Add SOS panic button and emergency contacts.
-Offline map support and data caching.
-Expand to web version for wider access.
+Firebase. (2024) Firebase Documentation. Available at: https://firebase.google.com/docs (Accessed: 6 October 2025).
 
-✨ Author
+---
+
+## 🧠 Future Improvements
+- Implement AI-based incident prediction.
+- Add SOS panic button and emergency contacts.
+- Offline map support and data caching.
+- Expand to web version for wider access.
+
+---
+
+## ✨ Author
 Developed by Keyur Ramdeen Singh, Preshen Pillay and Ethan Pillay
+
 📅 Last Updated: October 2025
-YouTube Demo Video: https://youtu.be/En-g9_VdMTY 
+
+YouTube Demo Video: https://youtu.be/En-g9_VdMTY

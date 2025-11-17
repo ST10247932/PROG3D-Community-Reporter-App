@@ -10,5 +10,7 @@
     <color name="blue_500">#3B82F6</color>
     <color name="blue">#3B82F6</color>
     <color name="red">#FF0000</color>
+    <color name="light_grey">#D3D3D3</color>
+
 
 </resources>

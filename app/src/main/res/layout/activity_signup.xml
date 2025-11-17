@@ -11,6 +11,15 @@
         android:orientation="vertical"
         android:gravity="center_horizontal">
 
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="59dp"
+            android:layout_height="62dp"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/logo_spottr2"
+            android:contentDescription="SPOTTR Logo" />
+
         <!-- Title -->
         <TextView
             android:layout_width="wrap_content"
@@ -21,6 +30,16 @@
             android:textStyle="bold"
             android:layout_marginBottom="32dp"
             android:importantForAccessibility="yes" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter your details to register an account"
+            android:textColor="#B0B0B0"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
 
         <!-- First & Last Name -->
         <LinearLayout
@@ -36,6 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="@string/first_name"
+                android:textColorHint="#5A5F7D"
                 app:boxStrokeColor="@color/teal_200"
                 android:layout_marginEnd="8dp">
 
@@ -43,10 +63,9 @@
                     android:id="@+id/etFirstName"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
-                    android:hint="First Name"
-                    android:background="@android:color/white"
+                    android:background="#252A45"
                     android:padding="12dp"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/white" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -55,6 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="@string/last_name"
+                android:textColorHint="#5A5F7D"
                 app:boxStrokeColor="@color/teal_200"
                 android:layout_marginStart="8dp">
 
@@ -62,10 +82,9 @@
                     android:id="@+id/etLastName"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
-                    android:hint="@string/last_name"
-                    android:background="@android:color/white"
+                    android:background="#252A45"
                     android:padding="12dp"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/white" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
@@ -75,6 +94,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email"
+            android:textColorHint="#5A5F7D"
             app:boxStrokeColor="@color/teal_200"
             android:layout_marginBottom="16dp">
 
@@ -82,11 +102,10 @@
                 android:id="@+id/etEmail"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:hint="@string/email"
-                android:background="@android:color/white"
                 android:padding="12dp"
+                android:background="#252A45"
                 android:inputType="textEmailAddress"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/white" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Phone Number -->
@@ -95,8 +114,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/address"
-
-
+            android:textColorHint="#5A5F7D"
             app:boxStrokeColor="@color/teal_200"
             android:layout_marginBottom="16dp">
 
@@ -104,10 +122,9 @@
                 android:id="@+id/etAddress"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:hint="@string/address"
-                android:background="@android:color/white"
+                android:background="#252A45"
                 android:padding="12dp"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/white" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Phone Number -->
@@ -116,7 +133,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/phone_number"
-
+            android:textColorHint="#5A5F7D"
             app:startIconContentDescription="Select country code"
             app:boxStrokeColor="@color/teal_200"
             android:layout_marginBottom="16dp">
@@ -125,11 +142,10 @@
                 android:id="@+id/etPhone"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:hint="@string/phone_number"
-                android:background="@android:color/white"
+                android:background="#252A45"
                 android:padding="12dp"
                 android:inputType="phone"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/white" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Password -->
@@ -138,7 +154,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/set_password"
+            android:textColorHint="#5A5F7D"
             app:endIconMode="password_toggle"
+            app:endIconTint="@color/blue_500"
             app:endIconContentDescription="Show or hide password"
             app:boxStrokeColor="@color/teal_200"
             android:layout_marginBottom="24dp">
@@ -147,11 +165,10 @@
                 android:id="@+id/etPassword"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:background="@android:color/white"
-
+                android:background="#252A45"
                 android:inputType="textPassword"
                 android:padding="12dp"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/white" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Register Button -->

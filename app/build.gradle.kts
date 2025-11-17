@@ -106,6 +106,6 @@ dependencies {
     implementation(libs.androidx.activity.ktx)
     implementation("com.google.android.gms:play-services-location:21.2.0")
 
-
+    implementation("androidx.biometric:biometric:1.2.0-alpha05")
 }
 
